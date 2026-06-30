@@ -92,4 +92,8 @@ OPPO_MINI=账号1Cookie@账号2Cookie
 
 不要把真实 Cookie 提交到公开仓库。
 
-APP 抓取时，脚本会跳过 `TOKENSID` / `ENCODE_TOKENSID` 为空的早期请求。只有检测到有效 `TOKEN_` 登录态后，才保存并通知。
+APP 抓取时，脚本会缓存并合并多次请求里的 Cookie。空值不会覆盖已有非空值，避免把有效 `TOKENSID` 覆盖成空。
+
+只有最近 30 分钟内检测到有效 `TOKENSID=TOKEN_` / `ENCODE_TOKENSID=TOKEN_`，并且关键 Cookie 字段齐全后，才保存并通知完整合并结果。
+
+如果一直没有通知，打开 OPPO 商城首页、签到任务、会员页多停留几秒，让 `bd_vid`、`oppo_track_id`、`sensorsdata2015jssdkcross`、`otrack_jssdk_store` 等字段都写入 Cookie。
