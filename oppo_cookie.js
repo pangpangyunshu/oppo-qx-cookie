@@ -1,11 +1,11 @@
 /*
 OPPO 商城 APP / 小程序 Cookie 抓取
 
-Quantumult X rewrite:
-^https:\/\/hd\.opposhop\.cn\/ url script-request-header oppo_cookie.js
+[rewrite_local]
+^https:\/\/hd\.opposhop\.cn\/ url script-request-header https://raw.githubusercontent.com/pangpangyunshu/oppo-qx-cookie/main/oppo_cookie.js
 
-MITM hostname:
-hd.opposhop.cn
+[mitm]
+hostname = hd.opposhop.cn
 
 APP:
 OPPO_APP=Cookie#User-Agent#会员等级

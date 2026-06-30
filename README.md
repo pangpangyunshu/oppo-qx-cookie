@@ -2,7 +2,24 @@
 
 用于抓取 OPPO 商城 APP 和 OPPO 商城小程序签到脚本所需变量。
 
-## 重写配置
+## 远程重写资源
+
+Quantumult X 添加这个资源：
+
+```txt
+https://raw.githubusercontent.com/pangpangyunshu/oppo-qx-cookie/main/oppo_cookie.conf
+```
+
+更新后应显示：
+
+```txt
+1 条重写规则已更新
+1 主机名已更新
+```
+
+不要把 `oppo_cookie.js` 当重写资源导入。`oppo_cookie.js` 是脚本文件，`oppo_cookie.conf` 才是重写资源。
+
+## 手动配置
 
 ```ini
 [rewrite_local]
