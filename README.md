@@ -57,6 +57,12 @@ OPPO_MINI=Cookie
 const DEFAULT_LEVEL = "普卡";
 ```
 
+也可以在 Quantumult X 的 `$prefs` 里预先保存：
+
+```txt
+OPPO_APP_LEVEL=银卡会员
+```
+
 ## 使用方法
 
 1. Quantumult X 开启 MitM 并信任证书。
@@ -85,3 +91,5 @@ OPPO_MINI=账号1Cookie@账号2Cookie
 ## 注意
 
 不要把真实 Cookie 提交到公开仓库。
+
+APP 抓取时，脚本会跳过 `TOKENSID` / `ENCODE_TOKENSID` 为空的早期请求。只有检测到有效 `TOKEN_` 登录态后，才保存并通知。
